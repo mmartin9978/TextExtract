@@ -9,6 +9,7 @@ from helper import FileHelper, S3Helper
 
 class Textractor:
     def getInputParameters(self, args):
+        print("ARGS: ", args)
         event = {}
         i = 0
         if(args):
@@ -125,6 +126,7 @@ class Textractor:
     def run(self):
 
         ips = None
+        print("Running.....")
         try:
             ips = self.validateInput(sys.argv)
         except Exception as e:
